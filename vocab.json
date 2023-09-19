@@ -1,0 +1,62 @@
+[
+  {
+    "word": "DEBILITATE",
+    "meaning": "making someone very weak and infirm",
+    "sentence": "The virus debilitates the body's immune system.",
+    "incorrect_def1": "to strengthen something/someone",
+    "incorrect_def2": "invigorate/rejuvenate",
+    "incorrect_def3": "to complain"
+
+  },
+  {
+    "word": "JEJUNE",
+    "meaning": "naive, simplistic, and superficial.",
+    "sentence": "They were of great service in correcting my jejune generalizations.",
+    "incorrect_def1": "smart and witty",
+    "incorrect_def2": "sophisticated",
+    "incorrect_def3": "mature and grown-up"
+  },
+  {
+    "word": "FACADE",
+    "meaning": "a front or outer appearance, esp a deceptive one/the face of a building, esp the main front",
+    "sentence": "Years of neglect mean some parts of the buildings' facade crumble in the hand.",
+    "incorrect_def1": "sincerity",
+    "incorrect_def2": "frankness",
+    "incorrect_def3": "candor"
+  },
+  {
+    "word": "ABSTAIN",
+    "meaning": "To abstain from something is to choose to not do or have that thing",
+    "sentence": "The doctor insisted that Drew abstain from eating for at least 12 hours before his blood test",
+    "incorrect_def1": "Lack of strength",
+    "incorrect_def2": "opt/decide",
+    "incorrect_def3": "handpick"
+
+  },
+  {
+    "word": "PARIAH",
+    "meaning": "one who is cast out or rejected by society",
+    "sentence": "I felt like a pariah when I wore the wrong outfit to the dinner party",
+    "incorrect_def1": "a respected person",
+    "incorrect_def2": "a popular person",
+    "incorrect_def3": "insider"
+
+  },
+  {
+    "word": "ANTEDILUVIAN",
+    "meaning": "dating or surviving from the distant past/person with old-fashioned ideas",
+    "sentence": "thought his dad was an antediluvian for refusing to use any social media",
+    "incorrect_def1": "contemporary",
+    "incorrect_def2": "feeling of hatred",
+    "incorrect_def3": "insider"
+
+  },
+  {
+    "word": "PUSSYFOOT",
+    "meaning": "to avoid giving a definite answer or position",
+    "sentence": "politicians who try to pussyfoot around hot-button issues",
+    "incorrect_def1": "to belittle someone",
+    "incorrect_def2": "to create a bad impression",
+    "incorrect_def3": "cowardly"
+  }
+]
