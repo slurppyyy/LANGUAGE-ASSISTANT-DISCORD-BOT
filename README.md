@@ -118,10 +118,3 @@ Grammar correction algorithms, like any automated tool, have limitations, and th
 If you encounter a situation where the grammar correction doesn't seem accurate or if you have any doubts, feel free to seek further clarification or consult additional grammar resources. Grammar Giraffe is here to assist you but may not always guarantee flawless corrections.
 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to customize this README template further to include additional information or sections that you find relevant to your bot and its users. Providing clear and concise documentation will make it easier for others to understand and use your Discord bot effectively.
