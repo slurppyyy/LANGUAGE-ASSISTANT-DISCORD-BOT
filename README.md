@@ -95,7 +95,7 @@ If you'd like to contribute to Grammar Giraffe, please follow these steps:
 ## Troubleshooting
 
 - **Bot Not Responding:**
-  If the bot does not respond within a reasonable time (e.g., 3 seconds), it might indicate an issue with the input. Double-check your command syntax and input and try again. If the problem persists, it's possible that an error has occurred in the bot's operation.
+  If the bot does not respond within a reasonable time (e.g., 3 seconds), it might indicate an issue with the input or a wrong command. Double-check your command syntax and input and try again. If the problem persists, it's possible that an error has occurred in the bot's operation.
 
   In case of repeated issues, consider reviewing the bot's logs or error messages for more details on what went wrong. If you suspect a bug or need assistance, feel free to let me know about it.
 
