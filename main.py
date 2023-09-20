@@ -1,3 +1,4 @@
+#import the needed pacakages.
 import requests
 import discord
 import json
@@ -13,22 +14,27 @@ from bs4 import BeautifulSoup
 
 my_secret = BOT_TOKEN
 
-#setting intent settings
+#setting up Discord intents.
 intents = discord.Intents.default()
 intents.message_content = True
 bot = discord.Client(intents=intents)
 
+# Enable nested asyncio event loops
 nest_asyncio.apply()
 
-
 #defining events
-#1)welcome msg
+ """
+    Event handler for when the bot is ready to operate.
+    Prints a message indicating successful login.
+  """
 @bot.event
 async def on_ready():
   print(f'WE HAVE LOGGED IN AS {bot.user}')
 
-
-
+'''
+Event handler for incoming messages.
+Parses message content and responds to specific commands.
+'''
 #2)messages
 @bot.event
 async def on_message(message):  #fetches meanings of words from a vocab API
@@ -54,7 +60,9 @@ async def on_message(message):  #fetches meanings of words from a vocab API
     await message.channel.send("GLAD TO BE OF HELP!")
   elif contents.startswith('!help'):
     await message.channel.send("1 !intro-just an introduction. \n 2.!hello-greeting \n 3.!how are you today \n 4.!goodbye \n 5.!thank you \n 6.!meaning-get the meaning of a word. \n 7.!check-corrects spelling and grammar of a sentence. \n 8.!flash-to take a vocab quiz. \n 9.!joke-get a joke to brighten your day. \n 10.!quotes-to fetch a motivational quote. \n 11.!wotd-discover a new word everyday. \n -you can also type !wotd yyyy/m/d to get the word of that specific day. \n 12.!help-get a list of available commands and their description.")
-
+'''
+Fetches the meaning of a word from a dictionary API.
+'''
   elif contents.startswith('!meaning'):
     word = contents[len('!meaning'):].strip()
     meaning= fetch_meaning(word)
@@ -66,16 +74,19 @@ async def on_message(message):  #fetches meanings of words from a vocab API
        await message.channel.send(f'SORRY I COULDNT FIND THE MEANING OF{word}')
     except Exception as e:
       await message.channel.send(f'ERROR OCCURED OF THE FORM {str(e)}')
-
+'''
+Corrects grammar and spelling of a sentence using a pre-trained model from huggingface transformers.
+'''
  
 
   elif contents.startswith('!check'):
     sentence = contents[len('!check'):].strip()
     correct_sent = correct_grammar_and_spell(sentence)
     await message.channel.send(f'THE CORRECTED SENTENCE IS {correct_sent}')
-   
-   
 
+  '''
+  Fetches flash quiz questions from the vocab.JSON file.
+  ''' 
   elif contents.startswith('!flash'):
     quiz_q=flash_questions()
     await message.channel.send(f'WHAT IS THE MEANING OF "{quiz_q["word"]}"?')
@@ -108,6 +119,9 @@ async def on_message(message):  #fetches meanings of words from a vocab API
                
     except asyncio.TimeoutError:
          await message.channel.send("SORRY YOU RAN OUT OF TIME")
+  '''
+  Fetches a random joke from a joke API.
+  '''
 
   elif contents.startswith('!joke'):
     Jk=await Jokes()
@@ -118,12 +132,17 @@ async def on_message(message):  #fetches meanings of words from a vocab API
       await message.channel.send(joke["setup"])
       await message.channel.send(joke["delivery"])
     await message.channel.send("I HOPE YOU LAUGHED;))")
- 
+
+'''
+ Fetches a random motivational quote.
+'''
   elif contents.startswith('!quotes'):
     quotes,author=fetch_quotes()
     await message.channel.send(f'{quotes} by :{author}')
     
-
+'''
+Fetches the word of the day and its definition from a website.
+'''
   elif contents.startswith('!wotd'):
     date=contents[len('!wotd'):].strip()
     word_of_the_day,definition=fetch_word_of_the_day(date)
@@ -139,9 +158,9 @@ async def on_message(message):  #fetches meanings of words from a vocab API
 
 
 
-
-  
-
+'''
+  Event handler for welcoming new members to the server.
+'''
 #3)new user intro msg
 @bot.event
 async def new_member(member):
@@ -209,13 +228,6 @@ def fetch_word_of_the_day(date):
 
 
 
-
-
-  
-
- 
-  
-    
   
 loop=asyncio.get_event_loop()
 loop.run_until_complete(on_ready())
