@@ -149,8 +149,7 @@ Fetches the word of the day and its definition from a website.
     await message.channel.send(f'THE WORD OF THE DAY IS:  {word_of_the_day}')
     await message.channel.send(f'IT MEANS: {definition}')
    
-  else:
-    await message.channel.send("LOOKS LIKE YOU'VE ENTERED A WRONG COMMAND:((.TYPE !HELP TO TAKE A LOOK AT MY COMMANDS.")
+
 
 
 
