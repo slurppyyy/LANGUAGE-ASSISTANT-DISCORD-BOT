@@ -105,7 +105,7 @@ Occasionally, you may encounter a situation where the `!joke` command initially 
 
 The `!joke` command fetches jokes from various sources, and sometimes it may receive incomplete or partial data. In such cases, the bot will display the received content, which may appear as a single word or phrase.
 
-However, the bot will quickly follow up with a complete joke, when you type !joke again.t. If you don't see a complete joke within a few seconds, you can try the command again.
+However, the bot will quickly follow up with a complete joke, when you type !joke again. If you don't see a complete joke within a few seconds, you can try the command again.
 
 I apologize for any confusion this behavior may cause and appreciate your understanding.
 
